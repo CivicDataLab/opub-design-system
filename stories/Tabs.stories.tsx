@@ -102,7 +102,7 @@ const Template: ComponentStory<typeof Tabs> = (args) => {
             <Input id="username" defaultValue="@peduarte" />
           </Fieldset>
           <Flex css={{ marginTop: 20, justifyContent: 'flex-end' }}>
-            <Button variant="green">Save changes</Button>
+            <Button variant="primary">Save changes</Button>
           </Flex>
         </TabsContent>
         <TabsContent value="tab2">
@@ -120,7 +120,7 @@ const Template: ComponentStory<typeof Tabs> = (args) => {
             <Input id="confirmPassword" type="password" />
           </Fieldset>
           <Flex css={{ marginTop: 20, justifyContent: 'flex-end' }}>
-            <Button variant="green">Change password</Button>
+            <Button variant="primary">Change password</Button>
           </Flex>
         </TabsContent>
       </Tabs>

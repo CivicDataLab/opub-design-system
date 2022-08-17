@@ -73,7 +73,7 @@ const Template: ComponentStory<typeof ToastProvider> = (args) => {
           </time>
         </ToastDescription>
         <ToastAction asChild altText="Goto schedule to undo">
-          <Button variant="green" size="sm">
+          <Button variant="primary" size="compact">
             Undo
           </Button>
         </ToastAction>

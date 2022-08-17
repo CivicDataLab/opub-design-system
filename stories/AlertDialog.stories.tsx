@@ -41,12 +41,10 @@ const Template: ComponentStory<typeof AlertDialog> = () => (
       </AlertDialogDescription>
       <Flex css={{ justifyContent: 'flex-end' }}>
         <AlertDialogCancel asChild>
-          <Button variant="gray" css={{ marginRight: 25 }}>
-            Cancel
-          </Button>
+          <Button css={{ marginRight: 25 }}>Cancel</Button>
         </AlertDialogCancel>
         <AlertDialogAction asChild>
-          <Button variant="red">Yes, delete account</Button>
+          <Button variant="secondary">Yes, delete account</Button>
         </AlertDialogAction>
       </Flex>
     </AlertDialogContent>

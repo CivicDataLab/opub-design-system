@@ -457,9 +457,7 @@ function Home() {
                   <Text size="2" css={{ color: '$slate11' }}>
                     Forgot password
                   </Text>
-                  <Button size="md" variant="blue">
-                    Log in
-                  </Button>
+                  <Button>Log in</Button>
                 </Flex>
               </form>
             </Box>
@@ -1193,128 +1191,6 @@ function Home() {
           <Separator />
         </Flex>
 
-        <Section size="3">
-          <Container size="2">
-            <Heading id="button" css={{ mb: '$6', scrollMarginTop: '$7' }}>
-              Button
-            </Heading>
-            <Flex css={{ gap: '$6' }}>
-              <Button size="sm">Button</Button>
-              <Button>Button</Button>
-              <Button size="lg">Button</Button>
-            </Flex>
-            <Flex css={{ mt: '$6', gap: '$6' }}>
-              <Button>Button</Button>
-              <Button variant="blue">Important</Button>
-              <Button variant="green">Secure</Button>
-              <Button variant="red">Warning</Button>
-            </Flex>
-            <Flex css={{ mt: '$6', gap: '$6' }}>
-              <Button ghost>Button</Button>
-              <Button ghost variant="blue">
-                Important
-              </Button>
-              <Button ghost variant="green">
-                Secure
-              </Button>
-              <Button ghost variant="red">
-                Warning
-              </Button>
-            </Flex>
-            <Box
-              css={{
-                position: 'relative',
-                mt: '$6',
-              }}
-            >
-              <Image
-                alt=""
-                src="https://images.unsplash.com/photo-1447690709975-318628b14c57?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2550&q=80"
-              />
-              <Box
-                css={{
-                  position: 'absolute',
-                  bottom: 0,
-                  right: 0,
-                  m: '$4',
-                }}
-              >
-                <Button variant="transparentWhite">Transparent</Button>
-              </Box>
-            </Box>
-            <Box
-              css={{
-                position: 'relative',
-                mt: '$6',
-              }}
-            >
-              <Image
-                alt=""
-                src="https://images.unsplash.com/photo-1453235421161-e41b42ebba05?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2550&q=80"
-              />
-              <Box
-                css={{
-                  position: 'absolute',
-                  bottom: 0,
-                  right: 0,
-                  m: '$4',
-                }}
-              >
-                <Button variant="transparentBlack">Transparent</Button>
-              </Box>
-            </Box>
-            <Flex css={{ mt: '$6', gap: '$6' }}>
-              <Button variant="red" disabled>
-                Disabled
-              </Button>
-              <Button variant="red" state="active">
-                Active
-              </Button>
-              <Button variant="red" state="waiting" disabled>
-                Waiting
-              </Button>
-            </Flex>
-            <Flex css={{ gap: '$6', mt: '$6' }}>
-              <Button>
-                <Box
-                  css={{
-                    mr: '$1',
-                  }}
-                >
-                  <PlusIcon />
-                </Box>
-                Button
-              </Button>
-              <Button variant="blue">
-                Button
-                <Box
-                  css={{
-                    ml: '$1',
-                  }}
-                >
-                  <ArrowRightIcon />
-                </Box>
-              </Button>
-              <Button variant="green">
-                <Box
-                  css={{
-                    mr: '$1',
-                  }}
-                >
-                  <PlusIcon />
-                </Box>
-                Button
-                <Box
-                  css={{
-                    ml: '$1',
-                  }}
-                >
-                  <ArrowRightIcon />
-                </Box>
-              </Button>
-            </Flex>
-          </Container>
-        </Section>
         <Flex css={{ jc: 'center' }}>
           <Separator />
         </Flex>
@@ -1675,10 +1551,10 @@ function Home() {
                 </AlertDialogDescription>
                 <Flex css={{ jc: 'flex-end', gap: '$3', mt: '$5' }}>
                   <AlertDialogCancel asChild>
-                    <Button ghost>Cancel</Button>
+                    <Button>Cancel</Button>
                   </AlertDialogCancel>
                   <AlertDialogAction asChild>
-                    <Button variant="red">Delete</Button>
+                    <Button>Delete</Button>
                   </AlertDialogAction>
                 </Flex>
               </AlertDialogContent>
@@ -1730,7 +1606,7 @@ function Home() {
                   </PopoverTrigger>
                   <PopoverContent>
                     <PopoverClose asChild>
-                      <Button ghost>Close</Button>
+                      <Button>Close</Button>
                     </PopoverClose>
                   </PopoverContent>
                 </Popover>
@@ -1846,7 +1722,7 @@ function Home() {
               </Popover>
               <Popover>
                 <PopoverTrigger asChild>
-                  <Button variant="blue">Blue</Button>
+                  <Button>Blue</Button>
                 </PopoverTrigger>
                 <PopoverContent css={{ padding: '$3' }}>
                   <Text size="2" css={{ lineHeight: '18px' }}>
@@ -1857,7 +1733,7 @@ function Home() {
               </Popover>
               <Popover>
                 <PopoverTrigger asChild>
-                  <Button variant="green">Green</Button>
+                  <Button>Green</Button>
                 </PopoverTrigger>
                 <PopoverContent css={{ padding: '$3' }}>
                   <Text size="2" css={{ lineHeight: '18px' }}>
@@ -1868,7 +1744,7 @@ function Home() {
               </Popover>
               <Popover>
                 <PopoverTrigger asChild>
-                  <Button variant="red">Red</Button>
+                  <Button>Red</Button>
                 </PopoverTrigger>
                 <PopoverContent css={{ padding: '$3' }}>
                   <Text size="2" css={{ lineHeight: '18px' }}>
@@ -1879,7 +1755,7 @@ function Home() {
               </Popover>
               <Popover>
                 <PopoverTrigger asChild>
-                  <Button ghost>Ghost</Button>
+                  <Button>Ghost</Button>
                 </PopoverTrigger>
                 <PopoverContent css={{ padding: '$3' }}>
                   <Text size="2" css={{ lineHeight: '18px' }}>
@@ -2950,7 +2826,7 @@ function Home() {
               <DropdownMenuTrigger asChild>
                 <Button>Dropdown</Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
+              <DropdownMenuContent>
                 <DropdownMenuGroup>
                   <DropdownMenuItem>Item</DropdownMenuItem>
                   <DropdownMenuItem>Item</DropdownMenuItem>
