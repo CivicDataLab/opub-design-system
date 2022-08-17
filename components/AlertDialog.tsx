@@ -43,8 +43,10 @@ const StyledContent = styled(AlertDialogPrimitive.Content, {
 interface Props {
   children?: ReactNode;
 }
+type AlertDialogVariants = React.ComponentProps<typeof AlertDialogPrimitive.Content>;
+type AlertDialogContentProps = AlertDialogVariants & Props;
 
-function Content({ children, ...props }: Props) {
+function Content({ children, ...props }: AlertDialogContentProps) {
   return (
     <AlertDialogPrimitive.Portal>
       <StyledOverlay />

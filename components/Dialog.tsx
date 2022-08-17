@@ -44,8 +44,10 @@ const StyledContent = styled(DialogPrimitive.Content, {
 interface Props {
   children?: ReactNode;
 }
+type DialogVariants = React.ComponentProps<typeof DialogPrimitive.Content>;
+type DialogContentProps = DialogVariants & Props;
 
-function Content({ children, ...props }: Props) {
+function Content({ children, ...props }: DialogContentProps) {
   return (
     <DialogPrimitive.Portal>
       <StyledOverlay />

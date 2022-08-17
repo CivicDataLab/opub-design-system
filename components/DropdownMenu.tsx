@@ -58,8 +58,10 @@ const StyledArrow = styled(DropdownMenuPrimitive.Arrow, {
 interface Props {
   children?: ReactNode;
 }
+type DropdownVariants = React.ComponentProps<typeof DropdownMenuPrimitive.Content>;
+type DropdownContentProps = DropdownVariants & Props;
 
-function Content({ children, ...props }: Props) {
+function Content({ children, ...props }: DropdownContentProps) {
   return (
     <DropdownMenuPrimitive.Portal>
       <StyledContent {...props}>

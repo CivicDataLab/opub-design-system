@@ -52,10 +52,11 @@ const StyledArrow = styled(TooltipPrimitive.Arrow, {
 
 interface Props {
   children?: ReactNode;
-  sideOffset?: any;
 }
+type Tooltipariants = React.ComponentProps<typeof TooltipPrimitive.Content>;
+type TooltipContentProps = Tooltipariants & Props;
 
-function Content({ children, ...props }: Props) {
+function Content({ children, ...props }: TooltipContentProps) {
   return (
     <TooltipPrimitive.Portal>
       <StyledContent {...props}>

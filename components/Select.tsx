@@ -37,12 +37,13 @@ const StyledContent = styled(SelectPrimitive.Content, {
 const StyledViewport = styled(SelectPrimitive.Viewport, {
   padding: 5,
 });
-
 interface Props {
   children?: ReactNode;
 }
+type Selectariants = React.ComponentProps<typeof SelectPrimitive.Content>;
+type AlertDialogContentProps = Selectariants & Props;
 
-function Content({ children, ...props }: Props) {
+function Content({ children, ...props }: AlertDialogContentProps) {
   return (
     <SelectPrimitive.Portal>
       <StyledContent {...props}>{children}</StyledContent>
