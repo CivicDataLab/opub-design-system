@@ -327,7 +327,7 @@ function Buttons() {
       <Grid css={{ gridTemplateColumns: 'repeat(4, 1fr)', gap: '$5' }}>
         {colors.map((color) => (
           <Box key={color} css={{ '&[class] * + *': { ml: '$2', verticalAlign: 'top' } }}>
-            <Button variant="gray">Neutral</Button>
+            <Button variant="default">Neutral</Button>
             <Button
               css={{
                 fontWeight: 500,
@@ -796,7 +796,6 @@ function Buttons() {
         {colors.map((color) => (
           <Box key={color} css={{ '&[class] * + *': { ml: '$2', verticalAlign: 'top' } }}>
             <Button
-              size="md"
               css={{
                 // fontWeight: 5,
                 textTransform: 'capitalize',
