@@ -35,7 +35,6 @@
     "@radix-ui/react-hover-card": "^1.0.0",
     "@radix-ui/react-icons": "1.1.1",
     "@radix-ui/react-menu": "1.0.0",
-    "@radix-ui/react-polymorphic": "^0.0.14",
     "@radix-ui/react-popover": "1.0.0",
     "@radix-ui/react-portal": "1.0.0",
     "@radix-ui/react-progress": "1.0.0",
@@ -51,7 +50,6 @@
     "@radix-ui/react-toggle-group": "^1.0.0",
     "@radix-ui/react-toolbar": "^1.0.0",
     "@radix-ui/react-tooltip": "1.0.0",
-    "@radix-ui/react-use-layout-effect": "1.0.0",
     "@stitches/react": "1.2.8",
     "lodash.merge": "^4.6.2"
   },

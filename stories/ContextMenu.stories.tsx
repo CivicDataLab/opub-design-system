@@ -18,7 +18,7 @@ import {
   ContextMenuItemIndicator,
 } from '../components/ContextMenu';
 import { CheckIcon, ChevronRightIcon, DotFilledIcon } from '@radix-ui/react-icons';
-import { Flex } from 'components/Flex';
+import { Flex } from '../components/Flex';
 
 export default {
   title: 'Primitive/ContextMenu',
