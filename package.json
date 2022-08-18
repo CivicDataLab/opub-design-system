@@ -15,8 +15,8 @@
     "test": "echo \"Error: no test specified\" && exit 0",
     "ds:build": "rollup -c",
     "ds:release": "yarn ds:build && np",
-    "storybook": "start-storybook -p 8001 -s ./public",
-    "build-storybook": "build-storybook -s ./public"
+    "storybook": "start-storybook -p 8001",
+    "build-storybook": "build-storybook"
   },
   "peerDependencies": {
     "react": "^18.0.0",

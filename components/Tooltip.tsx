@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
 import { styled, keyframes } from '@stitches/react';
-import { PlusIcon } from '@radix-ui/react-icons';
-import { violet, blackA } from '@radix-ui/colors';
+import { violet } from '@radix-ui/colors';
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
 
 const slideUpAndFade = keyframes({
@@ -72,37 +71,3 @@ export const TooltipProvider = TooltipPrimitive.Provider;
 export const Tooltip = TooltipPrimitive.Root;
 export const TooltipTrigger = TooltipPrimitive.Trigger;
 export const TooltipContent = Content;
-
-// Your app...
-const IconButton = styled('button', {
-  all: 'unset',
-  fontFamily: 'inherit',
-  borderRadius: '100%',
-  height: 35,
-  width: 35,
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  color: violet.violet11,
-  backgroundColor: 'white',
-  boxShadow: `0 2px 10px ${blackA.blackA7}`,
-  '&:hover': { backgroundColor: violet.violet3 },
-  '&:focus': { boxShadow: `0 0 0 2px black` },
-});
-
-const TooltipDemo = () => {
-  return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <IconButton>
-            <PlusIcon />
-          </IconButton>
-        </TooltipTrigger>
-        <TooltipContent sideOffset={5}>Add to library</TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
-  );
-};
-
-export default TooltipDemo;
