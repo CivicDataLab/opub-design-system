@@ -3,13 +3,19 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { BreadCrumbs, BreadCrumbsItems } from 'components/Breadcrumb';
 
 export default {
-  title: 'Primitive/Breadcrumb',
+  title: 'Layout/Breadcrumb',
   component: BreadCrumbs,
   argTypes: {
     icon: {
       control: {
         type: null,
       },
+    },
+    'aria-current="page"': {
+      control: {
+        type: null,
+      },
+      table: { type: { summary: 'add aria-current="page" to mark the item as current page.' } },
     },
   },
   parameters: {
@@ -39,7 +45,9 @@ Chevron.decorators = [
   () => (
     <BreadCrumbs icon="chevron">
       <BreadCrumbsItems href="#">Home</BreadCrumbsItems>
-      <BreadCrumbsItems href="#">Odisha</BreadCrumbsItems>
+      <BreadCrumbsItems aria-current="page" href="#">
+        Odisha
+      </BreadCrumbsItems>
     </BreadCrumbs>
   ),
 ];

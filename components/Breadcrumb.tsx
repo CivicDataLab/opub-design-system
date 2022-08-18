@@ -27,6 +27,12 @@ const StyledBreadCrumbsItems = styled('a', {
   '&:hover': {
     textDecorationThickness: '2px',
   },
+
+  '&[aria-current="page"]': {
+    color: '$hiContrast',
+    'font-weight': 700,
+    'text-decoration': 'none',
+  },
 });
 
 type Props = {

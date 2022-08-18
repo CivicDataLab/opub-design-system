@@ -5,7 +5,7 @@ import { styled } from 'stitches.config';
 import { InfoCircledIcon } from '@radix-ui/react-icons';
 
 export default {
-  title: 'Primitive/Aside',
+  title: 'Layout/Aside',
   component: Aside,
 
   parameters: {

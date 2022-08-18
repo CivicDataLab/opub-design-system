@@ -1,7 +1,8 @@
 import React, { ReactNode } from 'react';
 import { violet, mauve, blackA } from '@radix-ui/colors';
-import { styled, VariantProps, CSS } from '../stitches.config';
+import { styled } from '../stitches.config';
 import * as SelectPrimitive from '@radix-ui/react-select';
+import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from '@radix-ui/react-icons';
 
 const StyledTrigger = styled(SelectPrimitive.SelectTrigger, {
   all: 'unset',
@@ -37,19 +38,6 @@ const StyledContent = styled(SelectPrimitive.Content, {
 const StyledViewport = styled(SelectPrimitive.Viewport, {
   padding: 5,
 });
-interface Props {
-  children?: ReactNode;
-}
-type Selectariants = React.ComponentProps<typeof SelectPrimitive.Content>;
-type AlertDialogContentProps = Selectariants & Props;
-
-function Content({ children, ...props }: AlertDialogContentProps) {
-  return (
-    <SelectPrimitive.Portal>
-      <StyledContent {...props}>{children}</StyledContent>
-    </SelectPrimitive.Portal>
-  );
-}
 
 const StyledItem = styled(SelectPrimitive.Item, {
   all: 'unset',
@@ -112,17 +100,78 @@ const StyledScrollUpButton = styled(SelectPrimitive.ScrollUpButton, scrollButton
 const StyledScrollDownButton = styled(SelectPrimitive.ScrollDownButton, scrollButtonStyles);
 
 // Exports
-export const Select = SelectPrimitive.Root;
 export const SelectTrigger = StyledTrigger;
 export const SelectValue = SelectPrimitive.Value;
 export const SelectIcon = StyledIcon;
 export const SelectContent = Content;
 export const SelectViewport = StyledViewport;
 export const SelectGroup = SelectPrimitive.Group;
-export const SelectItem = StyledItem;
 export const SelectItemText = SelectPrimitive.ItemText;
 export const SelectItemIndicator = StyledItemIndicator;
 export const SelectLabel = StyledLabel;
 export const SelectSeparator = StyledSeparator;
 export const SelectScrollUpButton = StyledScrollUpButton;
 export const SelectScrollDownButton = StyledScrollDownButton;
+
+// Abstracting the component
+type ContentProps = {
+  children?: ReactNode;
+};
+type Selectariants = React.ComponentProps<typeof SelectPrimitive.Content>;
+type AlertDialogContentProps = Selectariants & ContentProps;
+
+function Content({ children, ...props }: AlertDialogContentProps) {
+  return (
+    <SelectPrimitive.Portal>
+      <StyledContent {...props}>{children}</StyledContent>
+    </SelectPrimitive.Portal>
+  );
+}
+
+type SelectItemVariants = React.ComponentProps<typeof StyledItem>;
+type SelectItemContentProps = SelectItemVariants;
+
+export const SelectItem = React.forwardRef<
+  React.ElementRef<typeof StyledItem>,
+  SelectItemContentProps
+>(({ children, ...props }: SelectItemContentProps, forwardedRef) => {
+  return (
+    <StyledItem {...props} ref={forwardedRef}>
+      <SelectItemText>{children}</SelectItemText>
+      <SelectItemIndicator>
+        <CheckIcon />
+      </SelectItemIndicator>
+    </StyledItem>
+  );
+});
+
+type SelectProps = {
+  placeholder?: string;
+};
+type SelectVariants = React.ComponentProps<typeof SelectPrimitive.Root>;
+type SelectContentProps = SelectVariants & SelectProps;
+
+export const Select = React.forwardRef<
+  React.ElementRef<typeof SelectPrimitive.Root>,
+  SelectContentProps
+>(({ children, placeholder, ...props }, forwardedRef) => {
+  return (
+    <SelectPrimitive.Root {...props}>
+      <SelectTrigger ref={forwardedRef}>
+        <SelectValue placeholder={placeholder} />
+        <SelectIcon>
+          <ChevronDownIcon />
+        </SelectIcon>
+      </SelectTrigger>
+      <SelectContent>
+        <SelectScrollUpButton>
+          <ChevronUpIcon />
+        </SelectScrollUpButton>
+        <SelectViewport>{children}</SelectViewport>
+        <SelectScrollDownButton>
+          <ChevronDownIcon />
+        </SelectScrollDownButton>
+      </SelectContent>
+    </SelectPrimitive.Root>
+  );
+});

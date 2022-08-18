@@ -1,30 +1,25 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { styled } from 'stitches.config';
-import { mauve, violet } from '@radix-ui/colors';
 import {
   Select,
   SelectContent,
   SelectGroup,
-  SelectIcon,
   SelectItem,
-  SelectItemIndicator,
-  SelectItemText,
   SelectLabel,
-  SelectScrollDownButton,
-  SelectScrollUpButton,
   SelectSeparator,
-  SelectTrigger,
-  SelectValue,
-  SelectViewport,
 } from 'components/Select';
-import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from '@radix-ui/react-icons';
 
 export default {
   title: 'Primitive/Select',
   component: Select,
   argTypes: {
+    defaultValue: {
+      control: {
+        type: null,
+      },
+      table: { type: { summary: 'select value of an item for default selected item.' } },
+    },
     asChild: {
       table: {
         disable: true,
@@ -56,71 +51,29 @@ export default {
 
 const Template: ComponentStory<typeof SelectContent> = (args) => {
   return (
-    <Select>
-      <SelectTrigger aria-label="Food">
-        <SelectValue placeholder="Select a fruit…" />
-        <SelectIcon>
-          <ChevronDownIcon />
-        </SelectIcon>
-      </SelectTrigger>
-      <SelectContent>
-        <SelectScrollUpButton>
-          <ChevronUpIcon />
-        </SelectScrollUpButton>
-        <SelectViewport>
-          <SelectGroup>
-            <SelectLabel>Fruits</SelectLabel>
-            <SelectItem value="apple">
-              <SelectItemText>Apple</SelectItemText>
-              <SelectItemIndicator>
-                <CheckIcon />
-              </SelectItemIndicator>
-            </SelectItem>
-            <SelectItem value="banana">
-              <SelectItemText>Banana</SelectItemText>
-              <SelectItemIndicator>
-                <CheckIcon />
-              </SelectItemIndicator>
-            </SelectItem>
-            <SelectItem value="blueberry">
-              <SelectItemText>Blueberry</SelectItemText>
-              <SelectItemIndicator>
-                <CheckIcon />
-              </SelectItemIndicator>
-            </SelectItem>
-          </SelectGroup>
+    <Select placeholder={args.placeholder}>
+      <SelectGroup>
+        <SelectLabel>Fruits</SelectLabel>
+        <SelectItem value="apple">Banana</SelectItem>
+        <SelectItem value="banana">Banana</SelectItem>
+        <SelectItem value="blueberry">Blueberry</SelectItem>
+      </SelectGroup>
 
-          <SelectSeparator />
+      <SelectSeparator />
 
-          <SelectGroup>
-            <SelectLabel>Vegetables</SelectLabel>
-            <SelectItem value="aubergine">
-              <SelectItemText>Aubergine</SelectItemText>
-              <SelectItemIndicator>
-                <CheckIcon />
-              </SelectItemIndicator>
-            </SelectItem>
-            <SelectItem value="broccoli">
-              <SelectItemText>Broccoli</SelectItemText>
-              <SelectItemIndicator>
-                <CheckIcon />
-              </SelectItemIndicator>
-            </SelectItem>
-            <SelectItem value="carrot" disabled>
-              <SelectItemText>Carrot</SelectItemText>
-              <SelectItemIndicator>
-                <CheckIcon />
-              </SelectItemIndicator>
-            </SelectItem>
-          </SelectGroup>
-        </SelectViewport>
-        <SelectScrollDownButton>
-          <ChevronDownIcon />
-        </SelectScrollDownButton>
-      </SelectContent>
+      <SelectGroup>
+        <SelectLabel>Vegetables</SelectLabel>
+        <SelectItem value="aubergine">Aubergine</SelectItem>
+        <SelectItem value="broccoli">Broccoli </SelectItem>
+        <SelectItem value="carrot" disabled>
+          Carrot
+        </SelectItem>
+      </SelectGroup>
     </Select>
   );
 };
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+  placeholder: 'choose...',
+};
