@@ -11,8 +11,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component:
-          'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it. <br /> [Radix UI Tooltip](https://www.radix-ui.com/docs/primitives/components/tooltip)',
+        component: 'Represents a portion of a document whose content is only indirectly related.',
       },
     },
   },

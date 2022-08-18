@@ -22,9 +22,9 @@ type Props = {
   id?: string;
 };
 
-function Aside({ icon, title, id }: Props) {
+function Aside({ icon, title, ...props }: Props) {
   return (
-    <StyledAside id={id}>
+    <StyledAside {...props}>
       {icon}
       <Title>{title}</Title>
     </StyledAside>
