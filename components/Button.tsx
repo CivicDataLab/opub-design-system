@@ -9,7 +9,6 @@ const loadingSpinner = keyframes({
 
 export const Button = styled(DEFAULT_TAG, {
   // Reset
-  all: 'unset',
   alignItems: 'center',
   boxSizing: 'border-box',
   userSelect: 'none',
@@ -20,13 +19,12 @@ export const Button = styled(DEFAULT_TAG, {
     boxSizing: 'border-box',
   },
 
-  // Custom reset?
+  // Custom reset
   display: 'inline-flex',
   flexShrink: 0,
   justifyContent: 'center',
   lineHeight: '1.5',
   WebkitTapHighlightColor: 'rgba(0,0,0,0)',
-  cursor: 'pointer',
 
   // Custom
   height: 'fit-content',

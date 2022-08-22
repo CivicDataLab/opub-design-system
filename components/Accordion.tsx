@@ -1,6 +1,5 @@
 import React from 'react';
 import { styled, keyframes } from '@stitches/react';
-import { violet, mauve } from '@radix-ui/colors';
 import { ChevronDownIcon } from '@radix-ui/react-icons';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import { CSS } from '../stitches.config';
@@ -39,7 +38,7 @@ const StyledItem = styled(AccordionPrimitive.Item, {
   '&:focus-within': {
     position: 'relative',
     zIndex: 1,
-    boxShadow: `0 0 0 2px ${mauve.mauve12}`,
+    boxShadow: '$colors$boxShadowFocus',
   },
 });
 
@@ -49,9 +48,8 @@ const StyledHeader = styled(AccordionPrimitive.Header, {
 });
 
 const StyledTrigger = styled(AccordionPrimitive.Trigger, {
-  all: 'unset',
   fontFamily: 'inherit',
-  backgroundColor: 'transparent',
+  backgroundColor: '$backgroundWhite',
   padding: '0 20px',
   height: 45,
   flex: 1,
@@ -60,18 +58,18 @@ const StyledTrigger = styled(AccordionPrimitive.Trigger, {
   justifyContent: 'space-between',
   fontSize: 15,
   lineHeight: 1,
-  color: violet.violet11,
-  boxShadow: `0 1px 0 ${mauve.mauve6}`,
+  color: '$textLightHigh',
+  boxShadow: `0 1px 0 $backgroundLight`,
   '&[data-state="closed"]': { backgroundColor: 'white' },
-  '&[data-state="open"]': { backgroundColor: 'white' },
-  '&:hover': { backgroundColor: mauve.mauve2 },
+  '&[data-state="open"]': { backgroundColor: '$backgroundLight' },
+  '&:hover': { backgroundColor: '$backgroundLightHover' },
 });
 
 const StyledContent = styled(AccordionPrimitive.Content, {
   overflow: 'hidden',
   fontSize: 15,
-  color: mauve.mauve11,
-  backgroundColor: mauve.mauve2,
+  color: '$textLightMedium',
+  backgroundColor: '$backgroundLight',
 
   '&[data-state="open"]': {
     animation: `${slideDown} 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
@@ -86,7 +84,7 @@ const StyledContentText = styled('div', {
 });
 
 const StyledChevron = styled(ChevronDownIcon, {
-  color: violet.violet10,
+  color: '$textLightHigh',
   transition: 'transform 300ms cubic-bezier(0.87, 0, 0.13, 1)',
   '[data-state=open] &': { transform: 'rotate(180deg)' },
 });

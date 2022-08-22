@@ -200,31 +200,33 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
         secondaryHover: '#CEA338',
         secondaryActive: '#AA862E',
 
-        boxShadow: '0 2px 10px $blackA7',
-
         // -----------------------------
-        'background-white': '#FFFFFF',
-        'background-light': '#EBF0EE',
-        'background-dark': '#2D523F',
-        'background-darker': '#2D523F',
-        'background-black': '#000000',
+        backgroundWhite: '#FFFFFF',
+        backgroundLight: '#EBF0EE',
+        backgroundLightHover: '#EFF2F0',
+        backgroundDark: '#2D523F',
+        backgroundDarker: '#2D523F',
+        backgroundBlack: '#000000',
 
         // text-background-foreground
-        'text-light-high': 'rgba(0, 0, 0, 1)',
-        'text-light-medium': 'rgba(0, 0, 0, 0.6)',
-        'text-light-light': 'rgba(0, 0, 0, 0.32)',
-        'text-light-disabled': 'rgba(0, 0, 0, 0.08)',
+        textLightHigh: 'rgba(0, 0, 0, 1)',
+        textLightMedium: 'rgba(0, 0, 0, 0.6)',
+        textLightLight: 'rgba(0, 0, 0, 0.32)',
+        textLightDisabled: 'rgba(0, 0, 0, 0.08)',
 
-        'text-dark-high': 'rgba(255, 255, 255, 1)',
-        'text-dark-medium': 'rgba(255, 255, 255, 0.72)',
-        'text-dark-light': 'rgba(255, 255, 255, 0.36)',
-        'text-dark-disabled': 'rgba(255, 255, 255, 0.16)',
+        textDarkHigh: 'rgba(255, 255, 255, 1)',
+        textDarkMedium: 'rgba(255, 255, 255, 0.72)',
+        textDarkLight: 'rgba(255, 255, 255, 0.36)',
+        textDarkDisabled: 'rgba(255, 255, 255, 0.16)',
 
         // Semantic
-        'semantic-info': '#317EB9',
-        'semantic-success': '#33835A',
-        'semantic-warning': '##D7AA3B',
-        'semantic-error': '#CD503D',
+        semanticInfo: '#317EB9',
+        semanticSuccess: '#33835A',
+        semanticWarning: '##D7AA3B',
+        semanticError: '#CD503D',
+
+        boxShadow: '0 2px 10px $blackA7',
+        boxShadowFocus: '0 0 0 2px #0D331F',
       },
       fonts: {
         primary: 'Rubik, -apple-system, system-ui, sans-serif',
