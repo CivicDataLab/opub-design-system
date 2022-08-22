@@ -1,7 +1,5 @@
 import React, { ReactNode } from 'react';
 import { styled, keyframes } from '@stitches/react';
-import { violet, blackA, mauve, green } from '@radix-ui/colors';
-import { Cross2Icon } from '@radix-ui/react-icons';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 
 const overlayShow = keyframes({
@@ -15,7 +13,7 @@ const contentShow = keyframes({
 });
 
 const StyledOverlay = styled(DialogPrimitive.Overlay, {
-  backgroundColor: blackA.blackA9,
+  backgroundColor: '$bgOverlay',
   position: 'fixed',
   inset: 0,
   '@media (prefers-reduced-motion: no-preference)': {
@@ -59,13 +57,13 @@ function Content({ children, ...props }: DialogContentProps) {
 const StyledTitle = styled(DialogPrimitive.Title, {
   margin: 0,
   fontWeight: 500,
-  color: mauve.mauve12,
+  color: '$textLightHigh',
   fontSize: 17,
 });
 
 const StyledDescription = styled(DialogPrimitive.Description, {
   margin: '10px 0 20px',
-  color: mauve.mauve11,
+  color: '$textLightMedium',
   fontSize: 15,
   lineHeight: 1.5,
 });

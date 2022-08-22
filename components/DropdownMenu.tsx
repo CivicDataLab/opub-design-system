@@ -1,12 +1,6 @@
 import React, { ReactNode } from 'react';
 import { styled, keyframes } from '@stitches/react';
-import { violet, mauve, blackA } from '@radix-ui/colors';
-import {
-  HamburgerMenuIcon,
-  DotFilledIcon,
-  CheckIcon,
-  ChevronRightIcon,
-} from '@radix-ui/react-icons';
+
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
 
 const slideUpAndFade = keyframes({
@@ -31,7 +25,7 @@ const slideLeftAndFade = keyframes({
 
 const contentStyles = {
   minWidth: 220,
-  backgroundColor: 'white',
+  backgroundColor: '$backgroundLighter',
   borderRadius: 6,
   padding: 5,
   boxShadow:
@@ -86,7 +80,7 @@ const itemStyles = {
   all: 'unset',
   fontSize: 13,
   lineHeight: 1,
-  color: violet.violet11,
+  color: '$textLightHigh',
   borderRadius: 3,
   display: 'flex',
   alignItems: 'center',
@@ -97,13 +91,13 @@ const itemStyles = {
   userSelect: 'none',
 
   '&[data-disabled]': {
-    color: mauve.mauve8,
+    color: '$textLightDisabled',
     pointerEvents: 'none',
   },
 
   '&[data-highlighted]': {
-    backgroundColor: violet.violet9,
-    color: violet.violet1,
+    backgroundColor: '$backgroundDark',
+    color: '$textDarkHigh',
   },
 };
 
@@ -112,8 +106,8 @@ const StyledCheckboxItem = styled(DropdownMenuPrimitive.CheckboxItem, { ...itemS
 const StyledRadioItem = styled(DropdownMenuPrimitive.RadioItem, { ...itemStyles });
 const StyledSubTrigger = styled(DropdownMenuPrimitive.SubTrigger, {
   '&[data-state="open"]': {
-    backgroundColor: violet.violet4,
-    color: violet.violet11,
+    backgroundColor: '$backgroundDark',
+    color: '$textDarkHigh',
   },
   ...itemStyles,
 });
@@ -122,12 +116,12 @@ const StyledLabel = styled(DropdownMenuPrimitive.Label, {
   paddingLeft: 25,
   fontSize: 12,
   lineHeight: '25px',
-  color: mauve.mauve11,
+  color: '$textLightMedium',
 });
 
 const StyledSeparator = styled(DropdownMenuPrimitive.Separator, {
   height: 1,
-  backgroundColor: violet.violet6,
+  backgroundColor: '$textLightLight',
   margin: 5,
 });
 

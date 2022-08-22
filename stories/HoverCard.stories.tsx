@@ -6,7 +6,7 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from '../components/Hov
 
 export default {
   title: 'Primitive/Hover Card',
-  component: HoverCardContent,
+  component: HoverCard,
   argTypes: {
     asChild: {
       table: {
@@ -30,7 +30,7 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof HoverCardContent>;
+} as ComponentMeta<typeof HoverCard>;
 
 // Your app...
 const Flex = styled('div', { display: 'flex' });
