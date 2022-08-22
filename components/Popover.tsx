@@ -2,7 +2,6 @@ import React from 'react';
 import { styled, CSS, keyframes } from '../stitches.config';
 import * as PopoverPrimitive from '@radix-ui/react-popover';
 import { Box } from './Box';
-import { violet } from '@radix-ui/colors';
 
 const Popover = PopoverPrimitive.Root;
 const PopoverTrigger = PopoverPrimitive.Trigger;
@@ -44,7 +43,7 @@ const StyledContent = styled(PopoverPrimitive.Content, {
     },
   },
   '&:focus': {
-    boxShadow: `hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px, 0 0 0 2px ${violet.violet7}`,
+    boxShadow: `hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px, $boxShadowFocus`,
   },
 });
 
@@ -57,13 +56,13 @@ const StyledClose = styled(PopoverPrimitive.Close, {
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
-  color: violet.violet11,
+  color: '$textLightHigh',
   position: 'absolute',
   top: 5,
   right: 5,
 
-  '&:hover': { backgroundColor: violet.violet4 },
-  '&:focus': { boxShadow: `0 0 0 2px ${violet.violet7}` },
+  '&:hover': { backgroundColor: '$backgroundLightHover' },
+  '&:focus': { boxShadow: '$boxShadowFocus' },
 });
 
 type PopoverContentPrimitiveProps = React.ComponentProps<typeof PopoverPrimitive.Content>;
