@@ -227,6 +227,9 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
 
         boxShadow: '0 2px 10px $blackA7',
         boxShadowFocus: '0 0 0 2px #0D331F',
+
+        bgOverlay: 'rgba(0, 0, 0, 0.44)',
+        // animation: `${overlayShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
       },
       fonts: {
         primary: 'Rubik, -apple-system, system-ui, sans-serif',
@@ -409,7 +412,10 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
   });
 
 export type CSS = Stitches.CSS<typeof config>;
-
+const overlayShow = keyframes({
+  '0%': { opacity: 0 },
+  '100%': { opacity: 1 },
+});
 export const darkTheme = createTheme('dark-theme', {
   colors: {
     ...grayDark,
