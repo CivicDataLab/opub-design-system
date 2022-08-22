@@ -183,7 +183,6 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
         ...whiteA,
         ...blackA,
 
-        // Semantic colors
         hiContrast: '$slate12',
         // loContrast: '$slate1',
         loContrast: 'white',
@@ -202,6 +201,30 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
         secondaryActive: '#AA862E',
 
         boxShadow: '0 2px 10px $blackA7',
+
+        // -----------------------------
+        'background-white': '#FFFFFF',
+        'background-light': '#EBF0EE',
+        'background-dark': '#2D523F',
+        'background-darker': '#2D523F',
+        'background-black': '#000000',
+
+        // text-background-foreground
+        'text-light-high': 'rgba(0, 0, 0, 1)',
+        'text-light-medium': 'rgba(0, 0, 0, 0.6)',
+        'text-light-light': 'rgba(0, 0, 0, 0.32)',
+        'text-light-disabled': 'rgba(0, 0, 0, 0.08)',
+
+        'text-dark-high': 'rgba(255, 255, 255, 1)',
+        'text-dark-medium': 'rgba(255, 255, 255, 0.72)',
+        'text-dark-light': 'rgba(255, 255, 255, 0.36)',
+        'text-dark-disabled': 'rgba(255, 255, 255, 0.16)',
+
+        // Semantic
+        'semantic-info': '#317EB9',
+        'semantic-success': '#33835A',
+        'semantic-warning': '##D7AA3B',
+        'semantic-error': '#CD503D',
       },
       fonts: {
         primary: 'Rubik, -apple-system, system-ui, sans-serif',
