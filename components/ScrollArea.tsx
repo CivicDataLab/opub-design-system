@@ -10,7 +10,7 @@ const StyledScrollArea = styled(ScrollAreaPrimitive.Root, {
   height: 225,
   borderRadius: 4,
   overflow: 'hidden',
-  boxShadow: `0 2px 10px ${blackA.blackA7}`,
+  boxShadow: '$colors$boxShadow',
 });
 
 const StyledViewport = styled(ScrollAreaPrimitive.Viewport, {

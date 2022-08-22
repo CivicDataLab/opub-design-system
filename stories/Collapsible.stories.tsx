@@ -40,7 +40,7 @@ const Repository = styled('div', {
   borderRadius: 4,
   margin: '10px 0',
   padding: 10,
-  boxShadow: `0 2px 10px ${blackA.blackA7}`,
+  boxShadow: '$colors$boxShadow',
 });
 
 const Template: ComponentStory<typeof Collapsible> = (args) => {

@@ -35,7 +35,7 @@ const SliderThumb = styled(SliderPrimitive.Thumb, {
   width: 20,
   height: 20,
   backgroundColor: 'white',
-  boxShadow: `0 2px 10px ${blackA.blackA7}`,
+  boxShadow: '$colors$boxShadow',
   borderRadius: 10,
   '&:hover': { backgroundColor: violet.violet3 },
   '&:focus': { boxShadow: `0 0 0 5px ${blackA.blackA8}` },
