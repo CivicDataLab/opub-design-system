@@ -17,7 +17,7 @@ const slideUp = keyframes({
 const StyledAccordion = styled(AccordionPrimitive.Root, {
   borderRadius: 6,
   width: 300,
-  boxShadow: '$colors$boxShadow',
+  boxShadow: '$boxShadow',
 });
 
 const StyledItem = styled(AccordionPrimitive.Item, {
@@ -38,7 +38,7 @@ const StyledItem = styled(AccordionPrimitive.Item, {
   '&:focus-within': {
     position: 'relative',
     zIndex: 1,
-    boxShadow: '$colors$boxShadowFocus',
+    boxShadow: '$boxShadowFocus',
   },
 });
 
@@ -49,7 +49,7 @@ const StyledHeader = styled(AccordionPrimitive.Header, {
 
 const StyledTrigger = styled(AccordionPrimitive.Trigger, {
   fontFamily: 'inherit',
-  backgroundColor: '$backgroundWhite',
+  backgroundColor: '$backgroundLighter',
   padding: '0 20px',
   height: 45,
   flex: 1,

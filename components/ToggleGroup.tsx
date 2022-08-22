@@ -7,7 +7,7 @@ const StyledToggleGroup = styled(ToggleGroupPrimitive.Root, {
   display: 'inline-flex',
   backgroundColor: mauve.mauve6,
   borderRadius: 4,
-  boxShadow: '$colors$boxShadow',
+  boxShadow: '$boxShadow',
 });
 
 const StyledItem = styled(ToggleGroupPrimitive.Item, {

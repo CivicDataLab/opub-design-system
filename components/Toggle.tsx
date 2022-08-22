@@ -16,7 +16,7 @@ const StyledToggle = styled(TogglePrimitive.Root, {
   lineHeight: 1,
   alignItems: 'center',
   justifyContent: 'center',
-  boxShadow: '$colors$boxShadow',
+  boxShadow: '$boxShadow',
   '&:hover': { backgroundColor: violet.violet4 },
   '&[data-state=on]': { backgroundColor: violet.violet6, color: violet.violet12 },
   '&:focus': { boxShadow: `0 0 0 2px black` },

@@ -201,12 +201,15 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
         secondaryActive: '#AA862E',
 
         // -----------------------------
-        backgroundWhite: '#FFFFFF',
+        backgroundLighter: '#FFFFFF',
         backgroundLight: '#EBF0EE',
         backgroundLightHover: '#EFF2F0',
         backgroundDark: '#2D523F',
         backgroundDarker: '#2D523F',
-        backgroundBlack: '#000000',
+
+        // form
+        formHover: '$slate8',
+        formFocus: '$blue9',
 
         // text-background-foreground
         textLightHigh: 'rgba(0, 0, 0, 1)',
@@ -226,7 +229,6 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
         semanticError: '#CD503D',
 
         boxShadow: '0 2px 10px $blackA7',
-        boxShadowFocus: '0 0 0 2px #0D331F',
 
         bgOverlay: 'rgba(0, 0, 0, 0.44)',
         // animation: `${overlayShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
@@ -234,6 +236,10 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
       fonts: {
         primary: 'Rubik, -apple-system, system-ui, sans-serif',
         mono: 'Söhne Mono, menlo, monospace',
+      },
+      shadows: {
+        boxShadowFocus: '0 0 0 2px #0D331F',
+        boxShadowFocusSlim: '0 0 0 1px #0D331F',
       },
       space: {
         1: '4px',

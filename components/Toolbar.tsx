@@ -18,7 +18,7 @@ const StyledToolbar = styled(ToolbarPrimitive.Root, {
   minWidth: 'max-content',
   borderRadius: 6,
   backgroundColor: 'white',
-  boxShadow: '$colors$boxShadow',
+  boxShadow: '$boxShadow',
 });
 
 const itemStyles = {

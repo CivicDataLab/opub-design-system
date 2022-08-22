@@ -122,7 +122,7 @@ const CustomStyledRadio = styled(RadioGroupPrimitive.Item, {
   width: 25,
   height: 25,
   borderRadius: '100%',
-  boxShadow: '$colors$boxShadow',
+  boxShadow: '$boxShadow',
   '&:hover': { backgroundColor: violet.violet3 },
   '&:focus': { boxShadow: `0 0 0 2px black` },
 });

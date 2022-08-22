@@ -29,13 +29,13 @@ const StyledCheckbox = styled(CheckboxPrimitive.Root, {
   overflow: 'hidden',
   '@hover': {
     '&:hover': {
-      boxShadow: 'inset 0 0 0 1px $colors$slate8',
+      boxShadow: 'inset 0 0 0 1px $colors$formHover',
     },
   },
   '&:focus': {
     outline: 'none',
     borderColor: '$red7',
-    boxShadow: 'inset 0 0 0 1px $colors$blue9, 0 0 0 1px $colors$blue9',
+    boxShadow: 'inset 0 0 0 1px $colors$formFocus, 0 0 0 1px $colors$formFocus',
   },
 
   variants: {
