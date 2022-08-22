@@ -215,7 +215,7 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
         textLightHigh: 'rgba(0, 0, 0, 1)',
         textLightMedium: 'rgba(0, 0, 0, 0.6)',
         textLightLight: 'rgba(0, 0, 0, 0.32)',
-        textLightDisabled: 'rgba(0, 0, 0, 0.08)',
+        textLightDisabled: 'rgba(0, 0, 0, 0.16)',
 
         textDarkHigh: 'rgba(255, 255, 255, 1)',
         textDarkMedium: 'rgba(255, 255, 255, 0.72)',

@@ -1,11 +1,10 @@
 import React from 'react';
 import { styled } from '@stitches/react';
-import { violet, mauve } from '@radix-ui/colors';
 import * as ContextMenuPrimitive from '@radix-ui/react-context-menu';
 
 const contentStyles = {
   minWidth: 220,
-  backgroundColor: 'white',
+  backgroundColor: '$backgroundLighter',
   borderRadius: 6,
   overflow: 'hidden',
   padding: 5,
@@ -37,7 +36,7 @@ const itemStyles = {
   all: 'unset',
   fontSize: 13,
   lineHeight: 1,
-  color: violet.violet11,
+  color: '$textLightHigh',
   borderRadius: 3,
   display: 'flex',
   alignItems: 'center',
@@ -48,13 +47,13 @@ const itemStyles = {
   userSelect: 'none',
 
   '&[data-disabled]': {
-    color: mauve.mauve8,
+    color: '$textLightDisabled',
     pointerEvents: 'none',
   },
 
   '&[data-highlighted]': {
-    backgroundColor: violet.violet9,
-    color: violet.violet1,
+    backgroundColor: '$backgroundDark',
+    color: '$textDarkHigh',
   },
 };
 
@@ -63,8 +62,8 @@ const StyledCheckboxItem = styled(ContextMenuPrimitive.CheckboxItem, { ...itemSt
 const StyledRadioItem = styled(ContextMenuPrimitive.RadioItem, { ...itemStyles });
 const StyledSubTrigger = styled(ContextMenuPrimitive.SubTrigger, {
   '&[data-state="open"]': {
-    backgroundColor: violet.violet4,
-    color: violet.violet11,
+    backgroundColor: '$backgroundDark',
+    color: '$textDarkHigh',
   },
   ...itemStyles,
 });
@@ -73,12 +72,12 @@ const StyledLabel = styled(ContextMenuPrimitive.Label, {
   paddingLeft: 25,
   fontSize: 12,
   lineHeight: '25px',
-  color: mauve.mauve11,
+  color: '$textLightMedium',
 });
 
 const StyledSeparator = styled(ContextMenuPrimitive.Separator, {
   height: 1,
-  backgroundColor: violet.violet6,
+  backgroundColor: '$textLightLight',
   margin: 5,
 });
 
