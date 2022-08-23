@@ -221,12 +221,12 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
         separator: '$textLightDisabled',
 
         // text-background-foreground
-        textLightHigh: 'rgba(0, 0, 0, 1)',
+        textLightHigh: 'rgba(0, 0, 0, 0.9)',
         textLightMedium: 'rgba(0, 0, 0, 0.6)',
         textLightLight: 'rgba(0, 0, 0, 0.32)',
         textLightDisabled: 'rgba(0, 0, 0, 0.16)',
 
-        textDarkHigh: 'rgba(255, 255, 255, 1)',
+        textDarkHigh: 'rgba(255, 255, 255, 0.9)',
         textDarkMedium: 'rgba(255, 255, 255, 0.72)',
         textDarkLight: 'rgba(255, 255, 255, 0.36)',
         textDarkDisabled: 'rgba(255, 255, 255, 0.16)',
@@ -241,6 +241,9 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
 
         breadcrumbs: '#888F8B',
         breadcrumbsActive: '$hiContrast',
+
+        asideBg: '$backgroundLighter',
+        bannerBg: '$backgroundLight',
         // animation: `${overlayShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
       },
       fonts: {
@@ -277,14 +280,22 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
       },
       fontSizes: {
         1: '12px',
-        2: '13px',
-        3: '15px',
-        4: '17px',
-        5: '19px',
-        6: '21px',
-        7: '27px',
-        8: '35px',
-        9: '59px',
+        2: '14px',
+        3: '16px',
+        4: '20px',
+        5: '24px',
+        6: '32px',
+        7: '40px',
+        8: '48px',
+        9: '64px',
+      },
+      fontWeights: {
+        1: 400,
+        2: 500,
+        3: 600,
+        4: 700,
+        5: 800,
+        6: 900,
       },
       radii: {
         1: '4px',

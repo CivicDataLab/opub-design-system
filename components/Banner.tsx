@@ -1,80 +1,41 @@
-import { styled } from '../stitches.config';
+import React from 'react';
+import { styled } from 'stitches.config';
 
-export const Banner = styled('div', {
-  // Reset
-  boxSizing: 'border-box',
-  '&::before': {
-    boxSizing: 'border-box',
-  },
-  '&::after': {
-    boxSizing: 'border-box',
-  },
-
+const StyledBanner = styled('div', {
+  'border-radius': '2px',
+  'background-color': '$bannerBg',
+  p: '8px 16px',
   display: 'flex',
-  justifyContent: 'center',
   alignItems: 'center',
-  gap: '$3',
+  gap: '$2',
+  lineHeight: 1.7,
+});
 
+const Title = styled('span', {
+  fontWeight: '$1',
+  fontSize: '$1',
+  lineHeight: 1.7,
   variants: {
-    size: {
-      '1': {
-        py: '$1',
-        px: '$4',
-      },
-    },
-    variant: {
-      loContrast: {
-        backgroundColor: '$loContrast',
-      },
-      gray: {
-        backgroundColor: '$slate3',
-      },
-      blue: {
-        backgroundColor: '$blue3',
-      },
-      green: {
-        backgroundColor: '$green3',
-      },
-      red: {
-        backgroundColor: '$red3',
-      },
-    },
-    rounded: {
+    bold: {
       true: {
-        borderRadius: '$pill',
+        fontWeight: '$3',
       },
     },
-    border: {
-      true: {
-        borderRadius: '$pill',
-      },
-    },
-  },
-  compoundVariants: [
-    {
-      border: 'true',
-      variant: 'gray',
-      css: {
-        borderColor: '$slate6',
-      },
-    },
-    {
-      border: 'true',
-      variant: 'blue',
-      css: {
-        borderColor: '$blue11',
-      },
-    },
-    {
-      border: 'true',
-      variant: 'loContrast',
-      css: {
-        borderColor: '$slate6',
-      },
-    },
-  ],
-  defaultVariants: {
-    size: '1',
-    variant: 'gray',
   },
 });
+
+type Props = {
+  title: React.ReactNode;
+  icon?: React.ReactNode;
+  bold?: boolean;
+};
+function Banner({ icon, title, bold = false }: Props) {
+  return (
+    <StyledBanner>
+      {icon && icon}
+      <Title bold={bold}>{title}</Title>
+    </StyledBanner>
+  );
+}
+
+export { Banner };
