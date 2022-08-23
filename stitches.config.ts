@@ -184,7 +184,6 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
         ...blackA,
 
         hiContrast: '$slate12',
-        // loContrast: '$slate1',
         loContrast: 'white',
         canvas: 'hsl(0 0% 93%)',
         panel: 'white',
@@ -205,7 +204,8 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
         backgroundLight: '#EBF0EE',
         backgroundLightHover: '$mauve3',
         backgroundDark: '#2D523F',
-        backgroundDarker: '#2D523F',
+        backgroundDarkA: '#2D523F50',
+        backgroundDarker: '#172920',
 
         // scroll
         scrollBar: '$mauve10',
@@ -217,6 +217,8 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
         formHover: '$slate8',
         formFocus: '$blue8',
         formSelected: '$blue9',
+
+        separator: '$textLightDisabled',
 
         // text-background-foreground
         textLightHigh: 'rgba(0, 0, 0, 1)',

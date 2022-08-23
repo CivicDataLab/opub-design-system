@@ -1,12 +1,11 @@
 import React from 'react';
 import { styled, CSS } from '../stitches.config';
 import * as SliderPrimitive from '@radix-ui/react-slider';
-import { blackA, violet } from '@radix-ui/colors';
 
 const SliderTrack = styled(SliderPrimitive.Track, {
   position: 'relative',
   flexGrow: 1,
-  backgroundColor: '$slate7',
+  backgroundColor: '$formBoundary',
   borderRadius: '$pill',
   '&[data-orientation="horizontal"]': {
     height: 2,
@@ -19,7 +18,7 @@ const SliderTrack = styled(SliderPrimitive.Track, {
 
 const SliderRange = styled(SliderPrimitive.Range, {
   position: 'absolute',
-  background: '$blue9',
+  background: '$formSelected',
   borderRadius: 'inherit',
   '&[data-orientation="horizontal"]': {
     height: '100%',
@@ -34,11 +33,11 @@ const SliderThumb = styled(SliderPrimitive.Thumb, {
   display: 'block',
   width: 20,
   height: 20,
-  backgroundColor: 'white',
+  backgroundColor: '$backgroundLighter',
   boxShadow: '$boxShadow',
   borderRadius: 10,
-  '&:hover': { backgroundColor: violet.violet3 },
-  '&:focus': { boxShadow: `0 0 0 5px ${blackA.blackA8}` },
+  '&:hover': { backgroundColor: '$backgroundLightHover' },
+  '&:focus': { boxShadow: `0 0 0 5px $colors$backgroundDarkA` },
 });
 
 export const StyledSlider = styled(SliderPrimitive.Root, {
@@ -59,7 +58,7 @@ export const StyledSlider = styled(SliderPrimitive.Root, {
   '@hover': {
     '&:hover': {
       [`& ${SliderTrack}`]: {
-        backgroundColor: '$slate8',
+        backgroundColor: '$formHover',
       },
       [`& ${SliderThumb}`]: {
         opacity: '1',
