@@ -1,14 +1,5 @@
 import React from 'react';
 import { styled } from '@stitches/react';
-import { violet, blackA, mauve } from '@radix-ui/colors';
-import {
-  StrikethroughIcon,
-  TextAlignLeftIcon,
-  TextAlignCenterIcon,
-  TextAlignRightIcon,
-  FontBoldIcon,
-  FontItalicIcon,
-} from '@radix-ui/react-icons';
 import * as ToolbarPrimitive from '@radix-ui/react-toolbar';
 
 const StyledToolbar = styled(ToolbarPrimitive.Root, {
@@ -17,14 +8,14 @@ const StyledToolbar = styled(ToolbarPrimitive.Root, {
   width: '100%',
   minWidth: 'max-content',
   borderRadius: 6,
-  backgroundColor: 'white',
+  backgroundColor: '$backgroundLighter',
   boxShadow: '$boxShadow',
 });
 
 const itemStyles = {
   all: 'unset',
   flex: '0 0 auto',
-  color: mauve.mauve11,
+  color: '$textLightHigh',
   height: 25,
   padding: '0 5px',
   borderRadius: 4,
@@ -33,8 +24,8 @@ const itemStyles = {
   lineHeight: 1,
   alignItems: 'center',
   justifyContent: 'center',
-  '&:hover': { backgroundColor: violet.violet3, color: violet.violet11 },
-  '&:focus': { position: 'relative', boxShadow: `0 0 0 2px ${violet.violet7}` },
+  '&:hover': { backgroundColor: '$backgroundLightHover' },
+  '&:focus': { position: 'relative', boxShadow: `$boxShadowFocus` },
 };
 
 const StyledButton = styled(
@@ -43,11 +34,11 @@ const StyledButton = styled(
     ...itemStyles,
     paddingLeft: 10,
     paddingRight: 10,
-    color: 'white',
-    backgroundColor: violet.violet9,
+    color: '$textDarkHigh',
+    backgroundColor: '$primary',
     cursor: 'pointer',
   },
-  { '&:hover': { color: 'white', backgroundColor: violet.violet10 } }
+  { '&:hover': { backgroundColor: '$colors$primaryHover' } }
 );
 
 const StyledLink = styled(
@@ -55,7 +46,7 @@ const StyledLink = styled(
   {
     ...itemStyles,
     backgroundColor: 'transparent',
-    color: mauve.mauve11,
+    color: '$textLightHigh',
     display: 'inline-flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -65,7 +56,7 @@ const StyledLink = styled(
 
 const StyledSeparator = styled(ToolbarPrimitive.Separator, {
   width: 1,
-  backgroundColor: mauve.mauve6,
+  backgroundColor: '$separator',
   margin: '0 10px',
 });
 
@@ -77,10 +68,10 @@ const StyledToggleGroup = styled(ToolbarPrimitive.ToggleGroup, {
 const StyledToggleItem = styled(ToolbarPrimitive.ToggleItem, {
   ...itemStyles,
   boxShadow: 0,
-  backgroundColor: 'white',
+  backgroundColor: '$backgroundLighter',
   marginLeft: 2,
   '&:first-child': { marginLeft: 0 },
-  '&[data-state=on]': { backgroundColor: violet.violet5, color: violet.violet11 },
+  '&[data-state=on]': { backgroundColor: '$backgroundDarkA' },
 });
 
 // Exports
@@ -90,38 +81,3 @@ export const ToolbarSeparator = StyledSeparator;
 export const ToolbarLink = StyledLink;
 export const ToolbarToggleGroup = StyledToggleGroup;
 export const ToolbarToggleItem = StyledToggleItem;
-
-const ToolbarDemo = () => (
-  <Toolbar aria-label="Formatting options">
-    <ToolbarToggleGroup type="multiple" aria-label="Text formatting">
-      <ToolbarToggleItem value="bold" aria-label="Bold">
-        <FontBoldIcon />
-      </ToolbarToggleItem>
-      <ToolbarToggleItem value="italic" aria-label="Italic">
-        <FontItalicIcon />
-      </ToolbarToggleItem>
-      <ToolbarToggleItem value="strikethrough" aria-label="Strike through">
-        <StrikethroughIcon />
-      </ToolbarToggleItem>
-    </ToolbarToggleGroup>
-    <ToolbarSeparator />
-    <ToolbarToggleGroup type="single" defaultValue="center" aria-label="Text alignment">
-      <ToolbarToggleItem value="left" aria-label="Left aligned">
-        <TextAlignLeftIcon />
-      </ToolbarToggleItem>
-      <ToolbarToggleItem value="center" aria-label="Center aligned">
-        <TextAlignCenterIcon />
-      </ToolbarToggleItem>
-      <ToolbarToggleItem value="right" aria-label="Right aligned">
-        <TextAlignRightIcon />
-      </ToolbarToggleItem>
-    </ToolbarToggleGroup>
-    <ToolbarSeparator />
-    <ToolbarLink href="#" target="_blank" css={{ marginRight: 10 }}>
-      Edited 2 hours ago
-    </ToolbarLink>
-    <ToolbarButton css={{ marginLeft: 'auto' }}>Share</ToolbarButton>
-  </Toolbar>
-);
-
-export default ToolbarDemo;

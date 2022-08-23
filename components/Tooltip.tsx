@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
 import { styled, keyframes } from '@stitches/react';
-import { violet } from '@radix-ui/colors';
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
 
 const slideUpAndFade = keyframes({
@@ -28,7 +27,8 @@ const StyledContent = styled(TooltipPrimitive.Content, {
   padding: '10px 15px',
   fontSize: 15,
   lineHeight: 1,
-  color: violet.violet11,
+  color: '$textLightHigh',
+  zIndex: '$max',
   backgroundColor: 'white',
   boxShadow: 'hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px',
   userSelect: 'none',
@@ -46,7 +46,7 @@ const StyledContent = styled(TooltipPrimitive.Content, {
 });
 
 const StyledArrow = styled(TooltipPrimitive.Arrow, {
-  fill: 'white',
+  fill: '$colors$backgroundLighter',
 });
 
 interface Props {
