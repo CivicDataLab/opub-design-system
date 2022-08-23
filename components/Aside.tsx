@@ -2,30 +2,31 @@ import React from 'react';
 import { styled } from 'stitches.config';
 
 const StyledAside = styled('aside', {
-  'border-radius': '2px',
-  'background-color': '#EBF0EE',
-  p: '8px 16px',
-  display: 'flex',
-  alignItems: 'center',
-  gap: '$2',
+  'border-top': '4px solid $colors$primary',
+  br: '4px',
+  px: '4px',
+
+  '@bp1': {
+    'border-top': 'none',
+    pl: '18px',
+    'border-left': '4px solid $colors$primary',
+  },
 });
 
 const Title = styled('span', {
-  fontWeight: 500,
-  fontSize: '0.875rem',
-  lineHeight: 1.7,
+  fontWeight: '$1',
+  fontSize: '$3',
+  lineHeight: 1.5,
+  'letter-spacing': '0.01em',
 });
 
 type Props = {
   title: React.ReactNode;
-  icon?: React.ReactNode;
-  id?: string;
 };
 
-function Aside({ icon, title, ...props }: Props) {
+function Aside({ title, ...props }: Props) {
   return (
     <StyledAside {...props}>
-      {icon}
       <Title>{title}</Title>
     </StyledAside>
   );

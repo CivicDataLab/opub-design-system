@@ -1,8 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Aside } from 'components/Aside';
-import { styled } from 'stitches.config';
-import { InfoCircledIcon } from '@radix-ui/react-icons';
 
 export default {
   title: 'Layout/Aside',
@@ -17,17 +15,17 @@ export default {
   },
 } as ComponentMeta<typeof Aside>;
 
-const Title = styled('span', {
-  fontWeight: 500,
-  fontSize: '0.875rem',
-  lineHeight: 1.7,
-});
-
 const Template: ComponentStory<typeof Aside> = () => {
   return (
     <Aside
       title={
-        <Title>Select any constituency to do the comparision and report card generation.</Title>
+        <p>
+          <strong>MGNREGS</strong> aims to enhance livelihood security of the rural masses with a
+          provision of at least 100 days of wage employment in a financial year to every rural
+          household whose adult member volunteers to do unskilled manual work. This is one of the
+          world’s largest public sector employment programmes, providing guaranteed income through
+          employment.
+        </p>
       }
     />
   );
@@ -35,15 +33,3 @@ const Template: ComponentStory<typeof Aside> = () => {
 
 export const Default = Template.bind({});
 Default.args = {};
-
-export const Icon = Template.bind({});
-Icon.decorators = [
-  () => (
-    <Aside
-      icon={<InfoCircledIcon />}
-      title={
-        <Title>Select any constituency to do the comparision and report card generation.</Title>
-      }
-    />
-  ),
-];
