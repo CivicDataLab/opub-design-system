@@ -1,9 +1,6 @@
 import React from 'react';
 import { styled } from '@stitches/react';
-import { violet, mauve, blackA } from '@radix-ui/colors';
 import * as ScrollAreaPrimitive from '@radix-ui/react-scroll-area';
-
-const SCROLLBAR_SIZE = 10;
 
 const StyledScrollArea = styled(ScrollAreaPrimitive.Root, {
   width: 200,
@@ -26,20 +23,20 @@ const StyledScrollbar = styled(ScrollAreaPrimitive.Scrollbar, {
   // disable browser handling of all panning and zooming gestures on touch devices
   touchAction: 'none',
   padding: 2,
-  background: blackA.blackA6,
+  background: '$scrollBackground',
   transition: 'background 160ms ease-out',
-  '&:hover': { background: blackA.blackA8 },
-  '&[data-orientation="vertical"]': { width: SCROLLBAR_SIZE },
+  '&:hover': { background: '$scrollBackgroundHover' },
+  '&[data-orientation="vertical"]': { width: '$sizes$2' },
   '&[data-orientation="horizontal"]': {
     flexDirection: 'column',
-    height: SCROLLBAR_SIZE,
+    height: '$sizes$2',
   },
 });
 
 const StyledThumb = styled(ScrollAreaPrimitive.Thumb, {
   flex: 1,
-  background: mauve.mauve10,
-  borderRadius: SCROLLBAR_SIZE,
+  background: '$scrollBar',
+  borderRadius: '$sizes$2',
   // increase target size for touch devices https://www.w3.org/WAI/WCAG21/Understanding/target-size.html
   position: 'relative',
   '&::before': {
@@ -56,7 +53,7 @@ const StyledThumb = styled(ScrollAreaPrimitive.Thumb, {
 });
 
 const StyledCorner = styled(ScrollAreaPrimitive.Corner, {
-  background: blackA.blackA8,
+  background: '$scrollBackgroundHover',
 });
 
 // Exports

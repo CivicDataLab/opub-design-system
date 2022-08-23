@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-import { violet, mauve, blackA } from '@radix-ui/colors';
 import { styled } from '../stitches.config';
 import * as SelectPrimitive from '@radix-ui/react-select';
 import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from '@radix-ui/react-icons';
@@ -15,21 +14,21 @@ const StyledTrigger = styled(SelectPrimitive.SelectTrigger, {
   lineHeight: 1,
   height: 35,
   gap: 5,
-  backgroundColor: 'white',
-  color: violet.violet11,
+  backgroundColor: '$backgroundLighter',
+  color: '$textLightHigh',
   boxShadow: '$boxShadow',
-  '&:hover': { backgroundColor: mauve.mauve3 },
-  '&:focus': { boxShadow: `0 0 0 2px black` },
-  '&[data-placeholder]': { color: violet.violet9 },
+  '&:hover': { backgroundColor: '$backgroundLightHover' },
+  '&:focus': { boxShadow: '$boxShadowFocus' },
+  '&[data-placeholder]': { color: '$textLightHigh' },
 });
 
 const StyledIcon = styled(SelectPrimitive.SelectIcon, {
-  color: violet.violet11,
+  color: '$textLightHigh',
 });
 
 const StyledContent = styled(SelectPrimitive.Content, {
   overflow: 'hidden',
-  backgroundColor: 'white',
+  backgroundColor: '$backgroundLighter',
   borderRadius: 6,
   boxShadow:
     '0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)',
@@ -43,7 +42,7 @@ const StyledItem = styled(SelectPrimitive.Item, {
   all: 'unset',
   fontSize: 13,
   lineHeight: 1,
-  color: violet.violet11,
+  color: '$textLightHigh',
   borderRadius: 3,
   display: 'flex',
   alignItems: 'center',
@@ -53,13 +52,13 @@ const StyledItem = styled(SelectPrimitive.Item, {
   userSelect: 'none',
 
   '&[data-disabled]': {
-    color: mauve.mauve8,
+    color: '$textLightDisabled',
     pointerEvents: 'none',
   },
 
   '&[data-highlighted]': {
-    backgroundColor: violet.violet9,
-    color: violet.violet1,
+    backgroundColor: '$backgroundDark',
+    color: '$textDarkHigh',
   },
 });
 
@@ -67,12 +66,12 @@ const StyledLabel = styled(SelectPrimitive.Label, {
   padding: '0 25px',
   fontSize: 12,
   lineHeight: '25px',
-  color: mauve.mauve11,
+  color: '$textLightMedium',
 });
 
 const StyledSeparator = styled(SelectPrimitive.Separator, {
   height: 1,
-  backgroundColor: violet.violet6,
+  backgroundColor: '$textLightLight',
   margin: 5,
 });
 
@@ -91,7 +90,7 @@ const scrollButtonStyles = {
   justifyContent: 'center',
   height: 25,
   backgroundColor: 'white',
-  color: violet.violet11,
+  color: '$textLightHigh',
   cursor: 'default',
 };
 

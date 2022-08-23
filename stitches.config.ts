@@ -203,9 +203,14 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
         // -----------------------------
         backgroundLighter: '#FFFFFF',
         backgroundLight: '#EBF0EE',
-        backgroundLightHover: '#EFF2F0',
+        backgroundLightHover: '$mauve3',
         backgroundDark: '#2D523F',
         backgroundDarker: '#2D523F',
+
+        // scroll
+        scrollBar: '$mauve10',
+        scrollBackground: '$blackA6',
+        scrollBackgroundHover: '$blackA8',
 
         // form
         formBoundary: '$slate7',
