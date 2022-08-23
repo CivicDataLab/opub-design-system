@@ -1,8 +1,7 @@
 import React from 'react';
 import { styled, CSS } from '../stitches.config';
 import * as TabsPrimitive from '@radix-ui/react-tabs';
-import { Separator } from './Separator';
-import { mauve, violet } from '@radix-ui/colors';
+import { violet } from '@radix-ui/colors';
 
 export const Tabs = styled(TabsPrimitive.Root, {
   display: 'flex',
@@ -23,11 +22,10 @@ export const TabsTrigger = styled(TabsPrimitive.Trigger, {
   justifyContent: 'center',
   fontSize: 15,
   lineHeight: 1,
-  color: mauve.mauve11,
+  color: '$textLightHigh',
   userSelect: 'none',
   '&:first-child': { borderTopLeftRadius: 6 },
   '&:last-child': { borderTopRightRadius: 6 },
-  '&:hover': { color: violet.violet11 },
 
   '@hover': {
     '&:hover': {
@@ -36,7 +34,7 @@ export const TabsTrigger = styled(TabsPrimitive.Trigger, {
   },
 
   '&[data-state="active"]': {
-    color: violet.violet11,
+    color: '$primary',
     boxShadow: 'inset 0 -1px 0 0 currentColor, 0 1px 0 0 currentColor',
   },
 
@@ -56,11 +54,11 @@ export const TabsTrigger = styled(TabsPrimitive.Trigger, {
 const StyledTabsList = styled(TabsPrimitive.List, {
   flexShrink: 0,
   display: 'flex',
-  borderBottom: `1px solid ${mauve.mauve6}`,
+  borderBottom: `1px solid $colors$textLightDisabled`,
 
   '&:focus': {
     outline: 'none',
-    boxShadow: 'inset 0 0 0 1px $slate8, 0 0 0 1px $slate8',
+    boxShadow: 'inset 0 0 0 1px currentColor, $boxShadowFocusSlim',
   },
   '&[data-orientation="vertical"]': {
     flexDirection: 'column',
