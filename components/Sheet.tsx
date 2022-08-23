@@ -27,6 +27,7 @@ const StyledOverlay = styled(DialogPrimitive.Overlay, {
   bottom: 0,
   left: 0,
   backgroundColor: '$bgOverlay',
+  zIndex: '$max',
 
   '&[data-state="open"]': {
     animation: `${fadeIn} 150ms cubic-bezier(0.22, 1, 0.36, 1)`,
@@ -55,7 +56,7 @@ const StyledContent = styled(DialogPrimitive.Content, {
   bottom: 0,
   width: 250,
   isolation: 'isolate',
-  zIndex: 10,
+  zIndex: '$max',
 
   // Among other things, prevents text alignment inconsistencies when dialog can't be centered in the viewport evenly.
   // Affects animated and non-animated dialogs alike.

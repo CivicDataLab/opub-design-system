@@ -29,7 +29,8 @@ const StyledContent = styled(PopoverPrimitive.Content, {
   borderRadius: 4,
   padding: 20,
   width: 260,
-  backgroundColor: 'white',
+  backgroundColor: '$backgroundLighter',
+  zIndex: '$max',
   boxShadow: 'hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px',
   '@media (prefers-reduced-motion: no-preference)': {
     animationDuration: '400ms',

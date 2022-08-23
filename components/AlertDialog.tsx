@@ -16,6 +16,7 @@ const StyledOverlay = styled(AlertDialogPrimitive.Overlay, {
   backgroundColor: '$bgOverlay',
   position: 'fixed',
   inset: 0,
+  zIndex: '$max',
   '@media (prefers-reduced-motion: no-preference)': {
     animation: `${overlayShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
   },
@@ -33,6 +34,7 @@ const StyledContent = styled(AlertDialogPrimitive.Content, {
   maxWidth: '500px',
   maxHeight: '85vh',
   padding: 25,
+  zIndex: '$max',
   '@media (prefers-reduced-motion: no-preference)': {
     animation: `${contentShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
   },
