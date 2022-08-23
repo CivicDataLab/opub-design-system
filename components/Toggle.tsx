@@ -1,13 +1,11 @@
 import React from 'react';
 import { styled } from '@stitches/react';
-import { violet, mauve, blackA } from '@radix-ui/colors';
-import { FontItalicIcon } from '@radix-ui/react-icons';
 import * as TogglePrimitive from '@radix-ui/react-toggle';
 
 const StyledToggle = styled(TogglePrimitive.Root, {
   all: 'unset',
-  backgroundColor: violet.violet3,
-  color: mauve.mauve11,
+  backgroundColor: '$backgroundLighter',
+  color: '$textLightHigh',
   height: 35,
   width: 35,
   borderRadius: 4,
@@ -17,8 +15,8 @@ const StyledToggle = styled(TogglePrimitive.Root, {
   alignItems: 'center',
   justifyContent: 'center',
   boxShadow: '$boxShadow',
-  '&:hover': { backgroundColor: violet.violet4 },
-  '&[data-state=on]': { backgroundColor: violet.violet6, color: violet.violet12 },
+  '&:hover': { backgroundColor: '$backgroundLightHover' },
+  '&[data-state=on]': { backgroundColor: '$backgroundDarkA' },
   '&:focus': { boxShadow: `0 0 0 2px black` },
 });
 

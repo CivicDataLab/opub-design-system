@@ -1,6 +1,5 @@
 import React from 'react';
 import { styled, keyframes } from '@stitches/react';
-import { slate } from '@radix-ui/colors';
 import * as ToastPrimitive from '@radix-ui/react-toast';
 
 const VIEWPORT_PADDING = 25;
@@ -71,15 +70,15 @@ const StyledTitle = styled(ToastPrimitive.Title, {
   gridArea: 'title',
   marginBottom: 5,
   fontWeight: 500,
-  color: slate.slate12,
-  fontSize: 15,
+  color: '$textLightHigh',
+  fontSize: '$3',
 });
 
 const StyledDescription = styled(ToastPrimitive.Description, {
   gridArea: 'description',
   margin: 0,
-  color: slate.slate11,
-  fontSize: 13,
+  color: '$textLightMedium',
+  fontSize: '$2',
   lineHeight: 1.3,
 });
 
