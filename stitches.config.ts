@@ -208,8 +208,10 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
         backgroundDarker: '#2D523F',
 
         // form
+        formBoundary: '$slate7',
         formHover: '$slate8',
-        formFocus: '$blue9',
+        formFocus: '$blue8',
+        formSelected: '$blue9',
 
         // text-background-foreground
         textLightHigh: 'rgba(0, 0, 0, 1)',
@@ -228,8 +230,6 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
         semanticWarning: '##D7AA3B',
         semanticError: '#CD503D',
 
-        boxShadow: '0 2px 10px $blackA7',
-
         bgOverlay: 'rgba(0, 0, 0, 0.44)',
         // animation: `${overlayShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
       },
@@ -238,6 +238,7 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
         mono: 'Söhne Mono, menlo, monospace',
       },
       shadows: {
+        boxShadow: '0 2px 10px $colors$blackA7',
         boxShadowFocus: '0 0 0 2px #0D331F',
         boxShadowFocusSlim: '0 0 0 1px #0D331F',
       },

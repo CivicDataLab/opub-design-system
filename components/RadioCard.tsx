@@ -13,7 +13,7 @@ export const StyledRadioButton = styled('div', {
   borderRadius: '$round',
   width: 25,
   height: 25,
-  boxShadow: 'inset 0 0 0 1px $colors$slate7',
+  boxShadow: 'inset 0 0 0 1px $colors$formBoundary',
   flexShrink: 0,
   mr: '$3',
 });
@@ -22,7 +22,7 @@ export const StyledRadioIndicator = styled('div', {
   borderRadius: '$round',
   width: 15,
   height: 15,
-  backgroundColor: '$blue9',
+  backgroundColor: '$formSelected',
   transform: 'scale(0)',
 });
 
@@ -39,15 +39,15 @@ export const StyledRadio = styled(RadioGroupPrimitive.Item, {
   display: 'flex',
   alignItems: 'center',
   borderRadius: '$2',
-  boxShadow: 'inset 0 0 0 1px $colors$slate7',
+  boxShadow: 'inset 0 0 0 1px $colors$formBoundary',
   p: '$3',
   '@hover': {
     '&:hover': {
-      boxShadow: 'inset 0 0 0 1px $colors$slate8',
+      boxShadow: 'inset 0 0 0 1px $colors$formHover',
     },
   },
   '&[data-state="checked"]': {
-    boxShadow: 'inset 0 0 0 1px $colors$blue8, 0 0 0 1px $colors$blue8 !important',
+    boxShadow: 'inset 0 0 0 1px $colors$formFocus, 0 0 0 1px $colors$formFocus !important',
     [`& ${StyledRadioIndicator}`]: {
       transform: 'scale(1)',
     },
