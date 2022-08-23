@@ -2,7 +2,6 @@ import React from 'react';
 import { styled, keyframes, VariantProps, CSS } from '../stitches.config';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 import { Cross1Icon } from '@radix-ui/react-icons';
-import { overlayStyles } from './Overlay';
 import { IconButton } from './IconButton';
 
 const Sheet = DialogPrimitive.Root;
@@ -21,12 +20,13 @@ const fadeOut = keyframes({
   to: { opacity: '0' },
 });
 
-const StyledOverlay = styled(DialogPrimitive.Overlay, overlayStyles, {
+const StyledOverlay = styled(DialogPrimitive.Overlay, {
   position: 'fixed',
   top: 0,
   right: 0,
   bottom: 0,
   left: 0,
+  backgroundColor: '$bgOverlay',
 
   '&[data-state="open"]': {
     animation: `${fadeIn} 150ms cubic-bezier(0.22, 1, 0.36, 1)`,
@@ -60,10 +60,6 @@ const StyledContent = styled(DialogPrimitive.Content, {
   // Among other things, prevents text alignment inconsistencies when dialog can't be centered in the viewport evenly.
   // Affects animated and non-animated dialogs alike.
   willChange: 'transform',
-
-  // '&:focus': {
-  //   outline: 'none',
-  // },
 
   '&[data-state="open"]': {
     animation: `${slideIn} 150ms cubic-bezier(0.22, 1, 0.36, 1)`,

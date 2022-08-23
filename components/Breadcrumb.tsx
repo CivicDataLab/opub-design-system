@@ -22,14 +22,14 @@ const StyledBreadCrumbsItems = styled('a', {
   fontWeight: 600,
   fontSize: '0.875rem',
   lineHeight: 1.7,
-  color: '#888F8B',
+  color: '$breadcrumbs',
 
   '&:hover': {
     textDecorationThickness: '2px',
   },
 
   '&[aria-current="page"]': {
-    color: '$hiContrast',
+    color: '$breadcrumbsAcrive',
     'font-weight': 700,
     'text-decoration': 'none',
   },

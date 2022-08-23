@@ -238,6 +238,9 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
         semanticError: '#CD503D',
 
         bgOverlay: 'rgba(0, 0, 0, 0.44)',
+
+        breadcrumbs: '#888F8B',
+        breadcrumbsActive: '$hiContrast',
         // animation: `${overlayShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
       },
       fonts: {
