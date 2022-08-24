@@ -48,6 +48,7 @@ const StyledHeader = styled(AccordionPrimitive.Header, {
 });
 
 const StyledTrigger = styled(AccordionPrimitive.Trigger, {
+  all: 'unset',
   fontFamily: 'inherit',
   backgroundColor: '$backgroundLighter',
   padding: '0 20px',
@@ -59,7 +60,7 @@ const StyledTrigger = styled(AccordionPrimitive.Trigger, {
   fontSize: 15,
   lineHeight: 1,
   color: '$textLightHigh',
-  boxShadow: `0 1px 0 $backgroundLight`,
+  boxShadow: `0 1px 0 $colors$backgroundLight`,
   '&[data-state="closed"]': { backgroundColor: 'white' },
   '&[data-state="open"]': { backgroundColor: '$backgroundLight' },
   '&:hover': { backgroundColor: '$backgroundLightHover' },
