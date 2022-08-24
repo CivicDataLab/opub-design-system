@@ -82,7 +82,7 @@ const Template: ComponentStory<typeof DropdownMenu> = (args) => {
           </Button>
         </DropdownMenuTrigger>
 
-        <DropdownMenuContent sideOffset={5}>
+        <DropdownMenuContent sideOffset={5} hideArrow>
           <DropdownMenuItem>
             New Tab <RightSlot>⌘+T</RightSlot>
           </DropdownMenuItem>

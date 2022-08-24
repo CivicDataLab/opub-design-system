@@ -31,14 +31,14 @@ const contentStyles = {
   boxShadow:
     '0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)',
   '@media (prefers-reduced-motion: no-preference)': {
-    animationDuration: '400ms',
+    animationDuration: '300ms',
     animationTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
     willChange: 'transform, opacity',
     '&[data-state="open"]': {
-      '&[data-side="top"]': { animationName: slideDownAndFade },
-      '&[data-side="right"]': { animationName: slideLeftAndFade },
-      '&[data-side="bottom"]': { animationName: slideUpAndFade },
-      '&[data-side="left"]': { animationName: slideRightAndFade },
+      '&[data-side="top"]': { animationName: slideUpAndFade },
+      '&[data-side="right"]': { animationName: slideRightAndFade },
+      '&[data-side="bottom"]': { animationName: slideDownAndFade },
+      '&[data-side="left"]': { animationName: slideLeftAndFade },
     },
   },
 };
@@ -51,16 +51,17 @@ const StyledArrow = styled(DropdownMenuPrimitive.Arrow, {
 
 interface Props {
   children?: ReactNode;
+  hideArrow?: boolean;
 }
 type DropdownVariants = React.ComponentProps<typeof DropdownMenuPrimitive.Content>;
 type DropdownContentProps = DropdownVariants & Props;
 
-function Content({ children, ...props }: DropdownContentProps) {
+function Content({ children, hideArrow, ...props }: DropdownContentProps) {
   return (
     <DropdownMenuPrimitive.Portal>
       <StyledContent {...props}>
         {children}
-        <StyledArrow />
+        {!hideArrow && <StyledArrow />}
       </StyledContent>
     </DropdownMenuPrimitive.Portal>
   );
