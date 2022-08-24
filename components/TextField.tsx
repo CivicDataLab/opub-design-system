@@ -29,7 +29,7 @@ export const TextField = styled('input', {
   },
 
   '&:-webkit-autofill::first-line': {
-    fontFamily: '$primary',
+    fontFamily: 'inherit',
     color: '$hiContrast',
   },
 
