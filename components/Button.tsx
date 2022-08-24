@@ -9,6 +9,7 @@ const loadingSpinner = keyframes({
 
 export const Button = styled(DEFAULT_TAG, {
   // Reset
+  all: 'unset',
   alignItems: 'center',
   boxSizing: 'border-box',
   userSelect: 'none',
@@ -30,7 +31,6 @@ export const Button = styled(DEFAULT_TAG, {
   height: 'fit-content',
   px: '$5',
   py: '$12',
-  fontFamily: '$primary',
   fontWeight: 600,
   fontVariantNumeric: 'tabular-nums',
   borderRadius: '2px',
