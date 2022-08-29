@@ -1,7 +1,6 @@
 import React from 'react';
 import { styled, CSS } from '../stitches.config';
 import * as TabsPrimitive from '@radix-ui/react-tabs';
-import { violet } from '@radix-ui/colors';
 
 export const Tabs = styled(TabsPrimitive.Root, {
   display: 'flex',
@@ -10,53 +9,10 @@ export const Tabs = styled(TabsPrimitive.Root, {
   },
 });
 
-export const TabsTrigger = styled(TabsPrimitive.Trigger, {
-  all: 'unset',
-  fontFamily: 'inherit',
-  backgroundColor: 'white',
-  padding: '0 20px',
-  height: 45,
-  flex: 1,
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  fontSize: 15,
-  lineHeight: 1,
-  color: '$textLightHigh',
-  userSelect: 'none',
-  '&:first-child': { borderTopLeftRadius: 6 },
-  '&:last-child': { borderTopRightRadius: 6 },
-
-  '@hover': {
-    '&:hover': {
-      color: '$hiContrast',
-    },
-  },
-
-  '&[data-state="active"]': {
-    color: '$primary',
-    boxShadow: 'inset 0 -1px 0 0 currentColor, 0 1px 0 0 currentColor',
-  },
-
-  '&[data-orientation="vertical"]': {
-    justifyContent: 'flex-start',
-    borderTopRightRadius: 0,
-    borderBottomLeftRadius: '$2',
-    borderBottomColor: 'transparent',
-
-    '&[data-state="active"]': {
-      borderBottomColor: '$slate6',
-      borderRightColor: 'transparent',
-    },
-  },
-});
-
 const StyledTabsList = styled(TabsPrimitive.List, {
   flexShrink: 0,
-  display: 'flex',
-  borderBottom: `1px solid $colors$textLightDisabled`,
 
-  '&:focus': {
+  '&:focus-visible': {
     outline: 'none',
     boxShadow: 'inset 0 0 0 1px currentColor, $boxShadowFocusSlim',
   },
@@ -77,12 +33,26 @@ export const TabsList = React.forwardRef<React.ElementRef<typeof StyledTabsList>
   )
 );
 
+export const TabsTrigger = styled(TabsPrimitive.Trigger, {
+  all: 'unset',
+  flex: 1,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  userSelect: 'none',
+
+  '&[data-orientation="vertical"]': {
+    justifyContent: 'flex-start',
+  },
+
+  '&:focus-visible': {
+    outline: 'none',
+    boxShadow: 'inset 0 0 0 1px currentColor, $boxShadowFocusSlim',
+  },
+});
+
 export const TabsContent = styled(TabsPrimitive.Content, {
   flexGrow: 1,
-  padding: 20,
-  backgroundColor: 'white',
-  borderBottomLeftRadius: 6,
-  borderBottomRightRadius: 6,
   outline: 'none',
-  '&:focus': { boxShadow: `0 0 0 2px black` },
+  '&:focus-visible': { boxShadow: `0 0 0 2px black` },
 });

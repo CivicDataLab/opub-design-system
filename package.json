@@ -1,6 +1,6 @@
 {
   "name": "@opub-cdl/design-system",
-  "version": "0.9.31",
+  "version": "0.9.32",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "files": [
