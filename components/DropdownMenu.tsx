@@ -24,7 +24,6 @@ const slideLeftAndFade = keyframes({
 });
 
 const contentStyles = {
-  minWidth: 220,
   boxShadow:
     '0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)',
   '@media (prefers-reduced-motion: no-preference)': {
@@ -76,44 +75,17 @@ function SubContent(props: any) {
 
 const itemStyles = {
   all: 'unset',
-  fontSize: 13,
-  lineHeight: 1,
-  color: '$textLightHigh',
-  borderRadius: 3,
-  display: 'flex',
-  alignItems: 'center',
-  height: 25,
-  padding: '0 5px',
-  position: 'relative',
-  paddingLeft: 25,
   userSelect: 'none',
-
-  '&[data-disabled]': {
-    color: '$textLightDisabled',
-    pointerEvents: 'none',
-  },
-
-  '&[data-highlighted]': {
-    backgroundColor: '$backgroundDark',
-    color: '$textDarkHigh',
-  },
 };
 
 const StyledItem = styled(DropdownMenuPrimitive.Item, { ...itemStyles });
 const StyledCheckboxItem = styled(DropdownMenuPrimitive.CheckboxItem, { ...itemStyles });
 const StyledRadioItem = styled(DropdownMenuPrimitive.RadioItem, { ...itemStyles });
 const StyledSubTrigger = styled(DropdownMenuPrimitive.SubTrigger, {
-  '&[data-state="open"]': {
-    backgroundColor: '$backgroundDark',
-    color: '$textDarkHigh',
-  },
   ...itemStyles,
 });
 
 const StyledLabel = styled(DropdownMenuPrimitive.Label, {
-  paddingLeft: 25,
-  fontSize: 12,
-  lineHeight: '25px',
   color: '$textLightMedium',
 });
 
