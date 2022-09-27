@@ -34,7 +34,6 @@ export const TabsList = React.forwardRef<React.ElementRef<typeof StyledTabsList>
 );
 
 export const TabsTrigger = styled(TabsPrimitive.Trigger, {
-  all: 'unset',
   flex: 1,
   display: 'flex',
   alignItems: 'center',
